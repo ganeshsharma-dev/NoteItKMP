@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Help
@@ -45,11 +47,11 @@ fun ProfileScreen(
 ) {
 
     Scaffold() { padding ->
-
         Column(
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
                 .padding(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -139,10 +141,10 @@ fun ProfileScreen(
                 text = "Help & Support"
             )
 
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.height(20.dp))
 
             Button(
-                onClick = {onAction(ProfileAction.LOGOUT)},
+                onClick = { onAction(ProfileAction.LOGOUT) },
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.error

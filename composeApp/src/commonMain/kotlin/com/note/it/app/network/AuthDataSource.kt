@@ -10,7 +10,7 @@ import io.ktor.http.*
 
 class AuthDataSource(private val client: HttpClient) {
 
-    private val BASE_URL = "http://103.212.135.69:5000"
+    private val BASE_URL = "https://noteit.co.in"
 
     suspend fun LOGIN(loginRequest: LoginRequest)
             : Result<LoginResponse, DataError.Remote> =

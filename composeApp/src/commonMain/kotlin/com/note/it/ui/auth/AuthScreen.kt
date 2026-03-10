@@ -109,7 +109,6 @@ fun AuthScreen(onLoginSuccess: (LoginData?) -> Unit) {
                     onSuccess = { response ->
                         isLoading = false
                      //   errorDialogMessage = response.message
-
                         onLoginSuccess(response.data)
 
                     },
@@ -125,6 +124,7 @@ fun AuthScreen(onLoginSuccess: (LoginData?) -> Unit) {
                             msg.contains("match", true) -> confirmPwdError = msg
                         }
                     }, validationError = { uiText ->
+                        isLoading = false
                         val msg = uiText?.asPlainString() ?: "Unknown error"
                         when {
                             msg.contains("name", true) -> nameError = msg

@@ -17,7 +17,7 @@ import io.ktor.http.contentType
 
 class NoteDataSource(private val client: HttpClient) {
 
-    private val BASE_URL = "http://103.212.135.69:5000"
+    private val BASE_URL = "https://noteit.co.in"
 
     suspend fun getNotes(userId : String)
             : Result<NotesListResponse, DataError.Remote> =
