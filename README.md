@@ -1,7 +1,7 @@
 # 📝 NoteIt KMP
 
 <p align="center">
-  <img src="assets/logo.png" alt="NoteIt Logo" width="150"/>
+  <img src="screenshots/logo.png" alt="NoteIt Logo" width="150"/>
 </p>
 
 <p align="center">
